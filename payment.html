@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Platba</title>
+  <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+  <div class="payment-container">
+    <h1>Platba kartou 💳</h1>
+    <form id="paymentForm">
+      <input type="text" placeholder="Číslo karty" required>
+      <input type="text" placeholder="MM/RR" required>
+      <input type="text" placeholder="CVV" required>
+      <button type="submit">Zaplatiť</button>
+    </form>
+    <div id="success" class="hidden">
+      <div class="checkmark">✔</div>
+      <h2>Platba úspešná!</h2>
+    </div>
+  </div>
+  <script src="payment.js"></script>
+</body>
+</html>

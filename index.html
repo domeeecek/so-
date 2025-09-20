@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Parkovanie</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="loginSection" class="card">
+    <h1>🚗 Smart Parkovanie</h1>
+    <div class="switcher">
+      <button id="switchUser">Používateľ</button>
+      <button id="switchAdmin">Admin</button>
+    </div>
+    <div id="adminForm" class="hidden">
+      <h2>Admin Login</h2>
+      <input type="text" id="adminUser" placeholder="Meno">
+      <input type="password" id="adminPass" placeholder="Heslo">
+      <button id="adminLogin">Prihlásiť</button>
+    </div>
+    <div id="userForm">
+      <h2>Používateľ</h2>
+      <input type="text" id="userName" placeholder="Meno">
+      <input type="password" id="userPass" placeholder="Heslo">
+      <div class="row">
+        <button id="userLogin">Prihlásiť</button>
+        <button id="userRegister">Registrovať</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="userDash" class="hidden">
+    <h2 id="userWelcome"></h2>
+    <p id="currentTime"></p>
+    <div class="addCar">
+      <input type="text" id="userPlate" placeholder="Zadaj ŠPZ (napr. BA123XY)">
+      <button id="addCar">Pridať auto</button>
+    </div>
+    <div id="carsContainer" class="carGrid"></div>
+    <h3>História parkovania</h3>
+    <table id="historyTable">
+      <thead>
+        <tr>
+          <th>ŠPZ</th>
+          <th>Status</th>
+          <th>Dátum & čas</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <button id="logoutUser" class="logoutBtn">Odhlásiť</button>
+  </div>
+
+  <div id="adminDash" class="hidden">
+    <h2>Admin Dashboard</h2>
+    <table id="adminCarsTable">
+      <thead>
+        <tr>
+          <th>ŠPZ</th>
+          <th>Status</th>
+          <th>Majiteľ</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <div id="adminHistory" class="hidden">
+      <h3>História pre <span id="selectedPlate"></span></h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Status</th>
+            <th>Dátum & čas</th>
+          </tr>
+        </thead>
+        <tbody id="plateHistory"></tbody>
+      </table>
+    </div>
+    <button id="logoutAdmin" class="logoutBtn">Odhlásiť</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #1a2980, #26d0ce);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.payment-container {
+  background: rgba(255,255,255,0.1);
+  padding: 30px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  text-align: center;
+  color: white;
+  animation: fadeIn 0.8s ease;
+}
+input {
+  display: block;
+  margin: 10px auto;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  width: 80%;
+}
+button {
+  background: #00c853;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+button:hover {
+  background: #009624;
+}
+.hidden { display: none; }
+.checkmark {
+  font-size: 50px;
+  color: #00e676;
+  animation: pop 0.5s ease;
+}
+@keyframes fadeIn {
+  from {opacity:0; transform: translateY(-20px);}
+  to {opacity:1; transform: translateY(0);}
+}
+@keyframes pop {
+  0% { transform: scale(0.5); }
+  100% { transform: scale(1.2); }
+}
